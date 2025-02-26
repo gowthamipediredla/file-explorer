@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.folder-container {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 3px;
+  margin-left: 4px;
+}
+
+.folder {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.mb-2 {
+  margin-bottom: 4px;
+}
