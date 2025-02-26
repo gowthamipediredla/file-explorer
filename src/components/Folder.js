@@ -19,17 +19,16 @@ export const Folder = ({ explorer, handleInsertNode, level = 0 }) => {
     }
   };
   return (
-    <div
-      className="folder-container"
-      style={{ marginLeft: level * 15 + "px" }}
-      onClick={(e) => {
-        e.stopPropagation;
-        setExpand(true);
-      }}
-    >
+    <div className="folder-container" style={{ marginLeft: level * 15 + "px" }}>
       {explorer.isFolder ? (
         <div className="folder">
-          <div className="mb-2">
+          <div
+            className="mb-2"
+            onClick={(e) => {
+              e.stopPropagation;
+              setExpand((prev) => !prev);
+            }}
+          >
             {explorer.name} 🗂️
             <>
               <button onClick={(e) => onAddClick(e, true)}>
